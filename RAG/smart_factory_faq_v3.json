@@ -1,0 +1,642 @@
+[
+  {
+    "question": "Why is the machine showing high voltage readings?",
+    "answer": "1. Check volt_lag1 and volt_lag3 for sudden spike pattern\n2. Review volt_diff — high value means unstable power supply\n3. Compare volt vs volt_mean_3 — deviation signals a fault\n4. Inspect electrical connections and power source\n5. Schedule maintenance if volt_std_3 is consistently high",
+    "machine": "Factory Machine",
+    "fault": "Voltage Spike",
+    "sensor_column": "volt",
+    "severity": "High",
+    "question_type": "fault_query",
+    "language": "en"
+  },
+  {
+    "question": "What causes voltage spikes in the sensor data?",
+    "answer": "1. Check volt_lag1 and volt_lag3 for sudden spike pattern\n2. Review volt_diff — high value means unstable power supply\n3. Compare volt vs volt_mean_3 — deviation signals a fault\n4. Inspect electrical connections and power source\n5. Schedule maintenance if volt_std_3 is consistently high",
+    "machine": "Factory Machine",
+    "fault": "Voltage Spike",
+    "sensor_column": "volt",
+    "severity": "High",
+    "question_type": "fault_query",
+    "language": "en"
+  },
+  {
+    "question": "How to fix abnormal volt values in the machine?",
+    "answer": "1. Check volt_lag1 and volt_lag3 for sudden spike pattern\n2. Review volt_diff — high value means unstable power supply\n3. Compare volt vs volt_mean_3 — deviation signals a fault\n4. Inspect electrical connections and power source\n5. Schedule maintenance if volt_std_3 is consistently high",
+    "machine": "Factory Machine",
+    "fault": "Voltage Spike",
+    "sensor_column": "volt",
+    "severity": "High",
+    "question_type": "solution_query",
+    "language": "en"
+  },
+  {
+    "question": "Machine volt spike?",
+    "answer": "1. Check volt_lag1 and volt_lag3 for sudden spike pattern\n2. Review volt_diff — high value means unstable power supply\n3. Compare volt vs volt_mean_3 — deviation signals a fault\n4. Inspect electrical connections and power source\n5. Schedule maintenance if volt_std_3 is consistently high",
+    "machine": "Factory Machine",
+    "fault": "Voltage Spike",
+    "sensor_column": "volt",
+    "severity": "High",
+    "question_type": "short_query",
+    "language": "en"
+  },
+  {
+    "question": "ما سبب ارتفاع قراءات الجهد الكهربائي في الماكينة؟",
+    "answer": "1. افحص volt_lag1 و volt_lag3 للكشف عن نمط الارتفاع المفاجئ\n2. راجع volt_diff — القيمة العالية تعني عدم استقرار مصدر الطاقة\n3. قارن volt بـ volt_mean_3 — الانحراف الكبير يشير إلى عطل\n4. افحص التوصيلات الكهربائية ومصدر الطاقة\n5. جدول صيانة إذا كان volt_std_3 مرتفعاً باستمرار",
+    "machine": "Factory Machine",
+    "fault": "Voltage Spike",
+    "sensor_column": "volt",
+    "severity": "High",
+    "question_type": "arabic_query",
+    "language": "ar"
+  },
+  {
+    "question": "كيف أصلح قيم الجهد الغير طبيعية؟",
+    "answer": "1. افحص volt_lag1 و volt_lag3 للكشف عن نمط الارتفاع المفاجئ\n2. راجع volt_diff — القيمة العالية تعني عدم استقرار مصدر الطاقة\n3. قارن volt بـ volt_mean_3 — الانحراف الكبير يشير إلى عطل\n4. افحص التوصيلات الكهربائية ومصدر الطاقة\n5. جدول صيانة إذا كان volt_std_3 مرتفعاً باستمرار",
+    "machine": "Factory Machine",
+    "fault": "Voltage Spike",
+    "sensor_column": "volt",
+    "severity": "High",
+    "question_type": "arabic_query",
+    "language": "ar"
+  },
+  {
+    "question": "Why is the machine showing high voltage readings?\nما سبب ارتفاع قراءات الجهد الكهربائي في الماكينة؟",
+    "answer": "1. Check volt_lag1 and volt_lag3 for sudden spike pattern\n2. Review volt_diff — high value means unstable power supply\n3. Compare volt vs volt_mean_3 — deviation signals a fault\n4. Inspect electrical connections and power source\n5. Schedule maintenance if volt_std_3 is consistently high\n\n---\n\n1. افحص volt_lag1 و volt_lag3 للكشف عن نمط الارتفاع المفاجئ\n2. راجع volt_diff — القيمة العالية تعني عدم استقرار مصدر الطاقة\n3. قارن volt بـ volt_mean_3 — الانحراف الكبير يشير إلى عطل\n4. افحص التوصيلات الكهربائية ومصدر الطاقة\n5. جدول صيانة إذا كان volt_std_3 مرتفعاً باستمرار",
+    "machine": "Factory Machine",
+    "fault": "Voltage Spike",
+    "sensor_column": "volt",
+    "severity": "High",
+    "question_type": "bilingual_query",
+    "language": "bilingual"
+  },
+  {
+    "question": "How to fix abnormal volt values in the machine?\nكيف أصلح قيم الجهد الغير طبيعية؟",
+    "answer": "1. Check volt_lag1 and volt_lag3 for sudden spike pattern\n2. Review volt_diff — high value means unstable power supply\n3. Compare volt vs volt_mean_3 — deviation signals a fault\n4. Inspect electrical connections and power source\n5. Schedule maintenance if volt_std_3 is consistently high\n\n---\n\n1. افحص volt_lag1 و volt_lag3 للكشف عن نمط الارتفاع المفاجئ\n2. راجع volt_diff — القيمة العالية تعني عدم استقرار مصدر الطاقة\n3. قارن volt بـ volt_mean_3 — الانحراف الكبير يشير إلى عطل\n4. افحص التوصيلات الكهربائية ومصدر الطاقة\n5. جدول صيانة إذا كان volt_std_3 مرتفعاً باستمرار",
+    "machine": "Factory Machine",
+    "fault": "Voltage Spike",
+    "sensor_column": "volt",
+    "severity": "High",
+    "question_type": "bilingual_query",
+    "language": "bilingual"
+  },
+  {
+    "question": "Why is the machine vibration sensor reading abnormally high?",
+    "answer": "1. Compare vibration vs vibration_mean_3 — deviation > 20% is critical\n2. Check vibration_lag1 and vibration_lag3 for rising trend\n3. Review stress_index — high value confirms mechanical overload\n4. Inspect machine mounting bolts and bearings physically\n5. Trigger maintenance if vibration_std_3 is increasing over time",
+    "machine": "Factory Machine",
+    "fault": "Abnormal Vibration",
+    "sensor_column": "vibration",
+    "severity": "High",
+    "question_type": "fault_query",
+    "language": "en"
+  },
+  {
+    "question": "What causes excessive vibration in factory machines?",
+    "answer": "1. Compare vibration vs vibration_mean_3 — deviation > 20% is critical\n2. Check vibration_lag1 and vibration_lag3 for rising trend\n3. Review stress_index — high value confirms mechanical overload\n4. Inspect machine mounting bolts and bearings physically\n5. Trigger maintenance if vibration_std_3 is increasing over time",
+    "machine": "Factory Machine",
+    "fault": "Abnormal Vibration",
+    "sensor_column": "vibration",
+    "severity": "High",
+    "question_type": "fault_query",
+    "language": "en"
+  },
+  {
+    "question": "How to reduce abnormal vibration detected by sensors?",
+    "answer": "1. Compare vibration vs vibration_mean_3 — deviation > 20% is critical\n2. Check vibration_lag1 and vibration_lag3 for rising trend\n3. Review stress_index — high value confirms mechanical overload\n4. Inspect machine mounting bolts and bearings physically\n5. Trigger maintenance if vibration_std_3 is increasing over time",
+    "machine": "Factory Machine",
+    "fault": "Abnormal Vibration",
+    "sensor_column": "vibration",
+    "severity": "High",
+    "question_type": "solution_query",
+    "language": "en"
+  },
+  {
+    "question": "High vibration alert?",
+    "answer": "1. Compare vibration vs vibration_mean_3 — deviation > 20% is critical\n2. Check vibration_lag1 and vibration_lag3 for rising trend\n3. Review stress_index — high value confirms mechanical overload\n4. Inspect machine mounting bolts and bearings physically\n5. Trigger maintenance if vibration_std_3 is increasing over time",
+    "machine": "Factory Machine",
+    "fault": "Abnormal Vibration",
+    "sensor_column": "vibration",
+    "severity": "High",
+    "question_type": "short_query",
+    "language": "en"
+  },
+  {
+    "question": "لماذا ترتفع قراءة الاهتزاز في الماكينة بشكل غير طبيعي؟",
+    "answer": "1. قارن vibration بـ vibration_mean_3 — انحراف أكثر من 20% يعد حرجاً\n2. افحص vibration_lag1 و vibration_lag3 للكشف عن اتجاه متصاعد\n3. راجع stress_index — القيمة العالية تؤكد الحمل الزائد الميكانيكي\n4. افحص مسامير التثبيت والمحامل فيزيائياً\n5. ابدأ الصيانة إذا كان vibration_std_3 في ارتفاع مستمر",
+    "machine": "Factory Machine",
+    "fault": "Abnormal Vibration",
+    "sensor_column": "vibration",
+    "severity": "High",
+    "question_type": "arabic_query",
+    "language": "ar"
+  },
+  {
+    "question": "كيف أخفض الاهتزاز الزائد في الماكينة؟",
+    "answer": "1. قارن vibration بـ vibration_mean_3 — انحراف أكثر من 20% يعد حرجاً\n2. افحص vibration_lag1 و vibration_lag3 للكشف عن اتجاه متصاعد\n3. راجع stress_index — القيمة العالية تؤكد الحمل الزائد الميكانيكي\n4. افحص مسامير التثبيت والمحامل فيزيائياً\n5. ابدأ الصيانة إذا كان vibration_std_3 في ارتفاع مستمر",
+    "machine": "Factory Machine",
+    "fault": "Abnormal Vibration",
+    "sensor_column": "vibration",
+    "severity": "High",
+    "question_type": "arabic_query",
+    "language": "ar"
+  },
+  {
+    "question": "Why is the machine vibration sensor reading abnormally high?\nلماذا ترتفع قراءة الاهتزاز في الماكينة بشكل غير طبيعي؟",
+    "answer": "1. Compare vibration vs vibration_mean_3 — deviation > 20% is critical\n2. Check vibration_lag1 and vibration_lag3 for rising trend\n3. Review stress_index — high value confirms mechanical overload\n4. Inspect machine mounting bolts and bearings physically\n5. Trigger maintenance if vibration_std_3 is increasing over time\n\n---\n\n1. قارن vibration بـ vibration_mean_3 — انحراف أكثر من 20% يعد حرجاً\n2. افحص vibration_lag1 و vibration_lag3 للكشف عن اتجاه متصاعد\n3. راجع stress_index — القيمة العالية تؤكد الحمل الزائد الميكانيكي\n4. افحص مسامير التثبيت والمحامل فيزيائياً\n5. ابدأ الصيانة إذا كان vibration_std_3 في ارتفاع مستمر",
+    "machine": "Factory Machine",
+    "fault": "Abnormal Vibration",
+    "sensor_column": "vibration",
+    "severity": "High",
+    "question_type": "bilingual_query",
+    "language": "bilingual"
+  },
+  {
+    "question": "How to reduce abnormal vibration detected by sensors?\nكيف أخفض الاهتزاز الزائد في الماكينة؟",
+    "answer": "1. Compare vibration vs vibration_mean_3 — deviation > 20% is critical\n2. Check vibration_lag1 and vibration_lag3 for rising trend\n3. Review stress_index — high value confirms mechanical overload\n4. Inspect machine mounting bolts and bearings physically\n5. Trigger maintenance if vibration_std_3 is increasing over time\n\n---\n\n1. قارن vibration بـ vibration_mean_3 — انحراف أكثر من 20% يعد حرجاً\n2. افحص vibration_lag1 و vibration_lag3 للكشف عن اتجاه متصاعد\n3. راجع stress_index — القيمة العالية تؤكد الحمل الزائد الميكانيكي\n4. افحص مسامير التثبيت والمحامل فيزيائياً\n5. ابدأ الصيانة إذا كان vibration_std_3 في ارتفاع مستمر",
+    "machine": "Factory Machine",
+    "fault": "Abnormal Vibration",
+    "sensor_column": "vibration",
+    "severity": "High",
+    "question_type": "bilingual_query",
+    "language": "bilingual"
+  },
+  {
+    "question": "Why is the machine pressure dropping below normal levels?",
+    "answer": "1. Check pressure_diff — negative value means pressure dropping fast\n2. Review pressure_lag1 and pressure_lag3 to confirm downward trend\n3. Compare pressure vs pressure_mean_3 for baseline deviation\n4. Inspect system for air or fluid leaks physically\n5. If pressure_max_3 was normal recently, check for sudden blockage",
+    "machine": "Factory Machine",
+    "fault": "Pressure Loss",
+    "sensor_column": "pressure",
+    "severity": "High",
+    "question_type": "fault_query",
+    "language": "en"
+  },
+  {
+    "question": "What causes low pressure readings in factory sensors?",
+    "answer": "1. Check pressure_diff — negative value means pressure dropping fast\n2. Review pressure_lag1 and pressure_lag3 to confirm downward trend\n3. Compare pressure vs pressure_mean_3 for baseline deviation\n4. Inspect system for air or fluid leaks physically\n5. If pressure_max_3 was normal recently, check for sudden blockage",
+    "machine": "Factory Machine",
+    "fault": "Pressure Loss",
+    "sensor_column": "pressure",
+    "severity": "High",
+    "question_type": "fault_query",
+    "language": "en"
+  },
+  {
+    "question": "How to fix pressure loss detected in machine data?",
+    "answer": "1. Check pressure_diff — negative value means pressure dropping fast\n2. Review pressure_lag1 and pressure_lag3 to confirm downward trend\n3. Compare pressure vs pressure_mean_3 for baseline deviation\n4. Inspect system for air or fluid leaks physically\n5. If pressure_max_3 was normal recently, check for sudden blockage",
+    "machine": "Factory Machine",
+    "fault": "Pressure Loss",
+    "sensor_column": "pressure",
+    "severity": "High",
+    "question_type": "solution_query",
+    "language": "en"
+  },
+  {
+    "question": "Pressure drop alert?",
+    "answer": "1. Check pressure_diff — negative value means pressure dropping fast\n2. Review pressure_lag1 and pressure_lag3 to confirm downward trend\n3. Compare pressure vs pressure_mean_3 for baseline deviation\n4. Inspect system for air or fluid leaks physically\n5. If pressure_max_3 was normal recently, check for sudden blockage",
+    "machine": "Factory Machine",
+    "fault": "Pressure Loss",
+    "sensor_column": "pressure",
+    "severity": "High",
+    "question_type": "short_query",
+    "language": "en"
+  },
+  {
+    "question": "ما سبب انخفاض الضغط في قراءات الحساس؟",
+    "answer": "1. افحص pressure_diff — القيمة السالبة تعني انخفاضاً سريعاً في الضغط\n2. راجع pressure_lag1 و pressure_lag3 لتأكيد الاتجاه التنازلي\n3. قارن pressure بـ pressure_mean_3 للكشف عن الانحراف عن الخط الأساسي\n4. افحص النظام بحثاً عن تسربات هواء أو سوائل\n5. إذا كان pressure_max_3 طبيعياً مؤخراً، ابحث عن انسداد مفاجئ",
+    "machine": "Factory Machine",
+    "fault": "Pressure Loss",
+    "sensor_column": "pressure",
+    "severity": "High",
+    "question_type": "arabic_query",
+    "language": "ar"
+  },
+  {
+    "question": "كيف أصلح انخفاض الضغط في بيانات الماكينة؟",
+    "answer": "1. افحص pressure_diff — القيمة السالبة تعني انخفاضاً سريعاً في الضغط\n2. راجع pressure_lag1 و pressure_lag3 لتأكيد الاتجاه التنازلي\n3. قارن pressure بـ pressure_mean_3 للكشف عن الانحراف عن الخط الأساسي\n4. افحص النظام بحثاً عن تسربات هواء أو سوائل\n5. إذا كان pressure_max_3 طبيعياً مؤخراً، ابحث عن انسداد مفاجئ",
+    "machine": "Factory Machine",
+    "fault": "Pressure Loss",
+    "sensor_column": "pressure",
+    "severity": "High",
+    "question_type": "arabic_query",
+    "language": "ar"
+  },
+  {
+    "question": "Why is the machine pressure dropping below normal levels?\nما سبب انخفاض الضغط في قراءات الحساس؟",
+    "answer": "1. Check pressure_diff — negative value means pressure dropping fast\n2. Review pressure_lag1 and pressure_lag3 to confirm downward trend\n3. Compare pressure vs pressure_mean_3 for baseline deviation\n4. Inspect system for air or fluid leaks physically\n5. If pressure_max_3 was normal recently, check for sudden blockage\n\n---\n\n1. افحص pressure_diff — القيمة السالبة تعني انخفاضاً سريعاً في الضغط\n2. راجع pressure_lag1 و pressure_lag3 لتأكيد الاتجاه التنازلي\n3. قارن pressure بـ pressure_mean_3 للكشف عن الانحراف عن الخط الأساسي\n4. افحص النظام بحثاً عن تسربات هواء أو سوائل\n5. إذا كان pressure_max_3 طبيعياً مؤخراً، ابحث عن انسداد مفاجئ",
+    "machine": "Factory Machine",
+    "fault": "Pressure Loss",
+    "sensor_column": "pressure",
+    "severity": "High",
+    "question_type": "bilingual_query",
+    "language": "bilingual"
+  },
+  {
+    "question": "How to fix pressure loss detected in machine data?\nكيف أصلح انخفاض الضغط في بيانات الماكينة؟",
+    "answer": "1. Check pressure_diff — negative value means pressure dropping fast\n2. Review pressure_lag1 and pressure_lag3 to confirm downward trend\n3. Compare pressure vs pressure_mean_3 for baseline deviation\n4. Inspect system for air or fluid leaks physically\n5. If pressure_max_3 was normal recently, check for sudden blockage\n\n---\n\n1. افحص pressure_diff — القيمة السالبة تعني انخفاضاً سريعاً في الضغط\n2. راجع pressure_lag1 و pressure_lag3 لتأكيد الاتجاه التنازلي\n3. قارن pressure بـ pressure_mean_3 للكشف عن الانحراف عن الخط الأساسي\n4. افحص النظام بحثاً عن تسربات هواء أو سوائل\n5. إذا كان pressure_max_3 طبيعياً مؤخراً، ابحث عن انسداد مفاجئ",
+    "machine": "Factory Machine",
+    "fault": "Pressure Loss",
+    "sensor_column": "pressure",
+    "severity": "High",
+    "question_type": "bilingual_query",
+    "language": "bilingual"
+  },
+  {
+    "question": "Why is the machine rotation speed dropping unexpectedly?",
+    "answer": "1. Check rotate_diff — large negative diff means sudden RPM drop\n2. Compare rotate vs rotate_mean_3 for baseline deviation\n3. Review power_stress — high value with low rotate means motor is struggling\n4. Check rotate_lag1 trend — gradual drop may indicate bearing wear\n5. Inspect motor and drive belt physically for wear or damage",
+    "machine": "Factory Machine",
+    "fault": "Rotation Speed Fault",
+    "sensor_column": "rotate",
+    "severity": "Medium",
+    "question_type": "fault_query",
+    "language": "en"
+  },
+  {
+    "question": "What causes abnormal RPM readings in factory machines?",
+    "answer": "1. Check rotate_diff — large negative diff means sudden RPM drop\n2. Compare rotate vs rotate_mean_3 for baseline deviation\n3. Review power_stress — high value with low rotate means motor is struggling\n4. Check rotate_lag1 trend — gradual drop may indicate bearing wear\n5. Inspect motor and drive belt physically for wear or damage",
+    "machine": "Factory Machine",
+    "fault": "Rotation Speed Fault",
+    "sensor_column": "rotate",
+    "severity": "Medium",
+    "question_type": "fault_query",
+    "language": "en"
+  },
+  {
+    "question": "How to diagnose low rotation speed from sensor data?",
+    "answer": "1. Check rotate_diff — large negative diff means sudden RPM drop\n2. Compare rotate vs rotate_mean_3 for baseline deviation\n3. Review power_stress — high value with low rotate means motor is struggling\n4. Check rotate_lag1 trend — gradual drop may indicate bearing wear\n5. Inspect motor and drive belt physically for wear or damage",
+    "machine": "Factory Machine",
+    "fault": "Rotation Speed Fault",
+    "sensor_column": "rotate",
+    "severity": "Medium",
+    "question_type": "solution_query",
+    "language": "en"
+  },
+  {
+    "question": "Low RPM detected?",
+    "answer": "1. Check rotate_diff — large negative diff means sudden RPM drop\n2. Compare rotate vs rotate_mean_3 for baseline deviation\n3. Review power_stress — high value with low rotate means motor is struggling\n4. Check rotate_lag1 trend — gradual drop may indicate bearing wear\n5. Inspect motor and drive belt physically for wear or damage",
+    "machine": "Factory Machine",
+    "fault": "Rotation Speed Fault",
+    "sensor_column": "rotate",
+    "severity": "Medium",
+    "question_type": "short_query",
+    "language": "en"
+  },
+  {
+    "question": "ما سبب انخفاض سرعة دوران الماكينة فجأة؟",
+    "answer": "1. افحص rotate_diff — قيمة سالبة كبيرة تعني انخفاضاً مفاجئاً في السرعة\n2. قارن rotate بـ rotate_mean_3 للكشف عن الانحراف\n3. راجع power_stress — قيمة عالية مع دوران منخفض يعني أن المحرك يعاني\n4. افحص اتجاه rotate_lag1 — الانخفاض التدريجي قد يشير لتآكل المحامل\n5. افحص المحرك وحزام القيادة فيزيائياً بحثاً عن تلف",
+    "machine": "Factory Machine",
+    "fault": "Rotation Speed Fault",
+    "sensor_column": "rotate",
+    "severity": "Medium",
+    "question_type": "arabic_query",
+    "language": "ar"
+  },
+  {
+    "question": "كيف أشخص انخفاض سرعة الدوران من بيانات الحساس؟",
+    "answer": "1. افحص rotate_diff — قيمة سالبة كبيرة تعني انخفاضاً مفاجئاً في السرعة\n2. قارن rotate بـ rotate_mean_3 للكشف عن الانحراف\n3. راجع power_stress — قيمة عالية مع دوران منخفض يعني أن المحرك يعاني\n4. افحص اتجاه rotate_lag1 — الانخفاض التدريجي قد يشير لتآكل المحامل\n5. افحص المحرك وحزام القيادة فيزيائياً بحثاً عن تلف",
+    "machine": "Factory Machine",
+    "fault": "Rotation Speed Fault",
+    "sensor_column": "rotate",
+    "severity": "Medium",
+    "question_type": "arabic_query",
+    "language": "ar"
+  },
+  {
+    "question": "Why is the machine rotation speed dropping unexpectedly?\nما سبب انخفاض سرعة دوران الماكينة فجأة؟",
+    "answer": "1. Check rotate_diff — large negative diff means sudden RPM drop\n2. Compare rotate vs rotate_mean_3 for baseline deviation\n3. Review power_stress — high value with low rotate means motor is struggling\n4. Check rotate_lag1 trend — gradual drop may indicate bearing wear\n5. Inspect motor and drive belt physically for wear or damage\n\n---\n\n1. افحص rotate_diff — قيمة سالبة كبيرة تعني انخفاضاً مفاجئاً في السرعة\n2. قارن rotate بـ rotate_mean_3 للكشف عن الانحراف\n3. راجع power_stress — قيمة عالية مع دوران منخفض يعني أن المحرك يعاني\n4. افحص اتجاه rotate_lag1 — الانخفاض التدريجي قد يشير لتآكل المحامل\n5. افحص المحرك وحزام القيادة فيزيائياً بحثاً عن تلف",
+    "machine": "Factory Machine",
+    "fault": "Rotation Speed Fault",
+    "sensor_column": "rotate",
+    "severity": "Medium",
+    "question_type": "bilingual_query",
+    "language": "bilingual"
+  },
+  {
+    "question": "How to diagnose low rotation speed from sensor data?\nكيف أشخص انخفاض سرعة الدوران من بيانات الحساس؟",
+    "answer": "1. Check rotate_diff — large negative diff means sudden RPM drop\n2. Compare rotate vs rotate_mean_3 for baseline deviation\n3. Review power_stress — high value with low rotate means motor is struggling\n4. Check rotate_lag1 trend — gradual drop may indicate bearing wear\n5. Inspect motor and drive belt physically for wear or damage\n\n---\n\n1. افحص rotate_diff — قيمة سالبة كبيرة تعني انخفاضاً مفاجئاً في السرعة\n2. قارن rotate بـ rotate_mean_3 للكشف عن الانحراف\n3. راجع power_stress — قيمة عالية مع دوران منخفض يعني أن المحرك يعاني\n4. افحص اتجاه rotate_lag1 — الانخفاض التدريجي قد يشير لتآكل المحامل\n5. افحص المحرك وحزام القيادة فيزيائياً بحثاً عن تلف",
+    "machine": "Factory Machine",
+    "fault": "Rotation Speed Fault",
+    "sensor_column": "rotate",
+    "severity": "Medium",
+    "question_type": "bilingual_query",
+    "language": "bilingual"
+  },
+  {
+    "question": "Why is the machine showing a high error count?",
+    "answer": "1. Check error_count_lag1 and error_count_lag3 — rising trend needs immediate action\n2. Review error_rate — errors per hour frequency\n3. Check error_trend — positive value means errors are accelerating\n4. If error_count_mean_3 is high, machine has been unstable for 3+ hours\n5. Check failure_flag — if already 1, stop machine for inspection now",
+    "machine": "Factory Machine",
+    "fault": "High Error Rate",
+    "sensor_column": "error_count",
+    "severity": "High",
+    "question_type": "fault_query",
+    "language": "en"
+  },
+  {
+    "question": "What causes increasing error rate in factory machine logs?",
+    "answer": "1. Check error_count_lag1 and error_count_lag3 — rising trend needs immediate action\n2. Review error_rate — errors per hour frequency\n3. Check error_trend — positive value means errors are accelerating\n4. If error_count_mean_3 is high, machine has been unstable for 3+ hours\n5. Check failure_flag — if already 1, stop machine for inspection now",
+    "machine": "Factory Machine",
+    "fault": "High Error Rate",
+    "sensor_column": "error_count",
+    "severity": "High",
+    "question_type": "fault_query",
+    "language": "en"
+  },
+  {
+    "question": "How to handle rising error_count in machine sensor data?",
+    "answer": "1. Check error_count_lag1 and error_count_lag3 — rising trend needs immediate action\n2. Review error_rate — errors per hour frequency\n3. Check error_trend — positive value means errors are accelerating\n4. If error_count_mean_3 is high, machine has been unstable for 3+ hours\n5. Check failure_flag — if already 1, stop machine for inspection now",
+    "machine": "Factory Machine",
+    "fault": "High Error Rate",
+    "sensor_column": "error_count",
+    "severity": "High",
+    "question_type": "solution_query",
+    "language": "en"
+  },
+  {
+    "question": "Error count rising?",
+    "answer": "1. Check error_count_lag1 and error_count_lag3 — rising trend needs immediate action\n2. Review error_rate — errors per hour frequency\n3. Check error_trend — positive value means errors are accelerating\n4. If error_count_mean_3 is high, machine has been unstable for 3+ hours\n5. Check failure_flag — if already 1, stop machine for inspection now",
+    "machine": "Factory Machine",
+    "fault": "High Error Rate",
+    "sensor_column": "error_count",
+    "severity": "High",
+    "question_type": "short_query",
+    "language": "en"
+  },
+  {
+    "question": "لماذا يرتفع عدد الأخطاء في بيانات الماكينة؟",
+    "answer": "1. افحص error_count_lag1 و error_count_lag3 — الاتجاه المتصاعد يستدعي تدخلاً فورياً\n2. راجع error_rate — عدد الأخطاء في الساعة\n3. افحص error_trend — القيمة الموجبة تعني تسارع الأخطاء\n4. إذا كان error_count_mean_3 مرتفعاً، الماكينة غير مستقرة منذ 3 ساعات أو أكثر\n5. افحص failure_flag — إذا كانت 1، أوقف الماكينة فوراً للفحص",
+    "machine": "Factory Machine",
+    "fault": "High Error Rate",
+    "sensor_column": "error_count",
+    "severity": "High",
+    "question_type": "arabic_query",
+    "language": "ar"
+  },
+  {
+    "question": "كيف أتعامل مع ارتفاع error_count في بيانات الحساس؟",
+    "answer": "1. افحص error_count_lag1 و error_count_lag3 — الاتجاه المتصاعد يستدعي تدخلاً فورياً\n2. راجع error_rate — عدد الأخطاء في الساعة\n3. افحص error_trend — القيمة الموجبة تعني تسارع الأخطاء\n4. إذا كان error_count_mean_3 مرتفعاً، الماكينة غير مستقرة منذ 3 ساعات أو أكثر\n5. افحص failure_flag — إذا كانت 1، أوقف الماكينة فوراً للفحص",
+    "machine": "Factory Machine",
+    "fault": "High Error Rate",
+    "sensor_column": "error_count",
+    "severity": "High",
+    "question_type": "arabic_query",
+    "language": "ar"
+  },
+  {
+    "question": "Why is the machine showing a high error count?\nلماذا يرتفع عدد الأخطاء في بيانات الماكينة؟",
+    "answer": "1. Check error_count_lag1 and error_count_lag3 — rising trend needs immediate action\n2. Review error_rate — errors per hour frequency\n3. Check error_trend — positive value means errors are accelerating\n4. If error_count_mean_3 is high, machine has been unstable for 3+ hours\n5. Check failure_flag — if already 1, stop machine for inspection now\n\n---\n\n1. افحص error_count_lag1 و error_count_lag3 — الاتجاه المتصاعد يستدعي تدخلاً فورياً\n2. راجع error_rate — عدد الأخطاء في الساعة\n3. افحص error_trend — القيمة الموجبة تعني تسارع الأخطاء\n4. إذا كان error_count_mean_3 مرتفعاً، الماكينة غير مستقرة منذ 3 ساعات أو أكثر\n5. افحص failure_flag — إذا كانت 1، أوقف الماكينة فوراً للفحص",
+    "machine": "Factory Machine",
+    "fault": "High Error Rate",
+    "sensor_column": "error_count",
+    "severity": "High",
+    "question_type": "bilingual_query",
+    "language": "bilingual"
+  },
+  {
+    "question": "How to handle rising error_count in machine sensor data?\nكيف أتعامل مع ارتفاع error_count في بيانات الحساس؟",
+    "answer": "1. Check error_count_lag1 and error_count_lag3 — rising trend needs immediate action\n2. Review error_rate — errors per hour frequency\n3. Check error_trend — positive value means errors are accelerating\n4. If error_count_mean_3 is high, machine has been unstable for 3+ hours\n5. Check failure_flag — if already 1, stop machine for inspection now\n\n---\n\n1. افحص error_count_lag1 و error_count_lag3 — الاتجاه المتصاعد يستدعي تدخلاً فورياً\n2. راجع error_rate — عدد الأخطاء في الساعة\n3. افحص error_trend — القيمة الموجبة تعني تسارع الأخطاء\n4. إذا كان error_count_mean_3 مرتفعاً، الماكينة غير مستقرة منذ 3 ساعات أو أكثر\n5. افحص failure_flag — إذا كانت 1، أوقف الماكينة فوراً للفحص",
+    "machine": "Factory Machine",
+    "fault": "High Error Rate",
+    "sensor_column": "error_count",
+    "severity": "High",
+    "question_type": "bilingual_query",
+    "language": "bilingual"
+  },
+  {
+    "question": "How do I know if a machine is overdue for maintenance?",
+    "answer": "1. Check days_since_maint — if > 30 days, schedule maintenance immediately\n2. Review maint_flag — if 1, maintenance is already overdue\n3. Check recent_maint — if 0 and stress_index is high, risk is critical\n4. Use log_days_since_maint for normalized urgency scoring\n5. Older machines (machine_age > 10) need more frequent maintenance cycles",
+    "machine": "Factory Machine",
+    "fault": "Overdue Maintenance",
+    "sensor_column": "days_since_maint",
+    "severity": "Medium",
+    "question_type": "fault_query",
+    "language": "en"
+  },
+  {
+    "question": "What does a high days_since_maint value mean?",
+    "answer": "1. Check days_since_maint — if > 30 days, schedule maintenance immediately\n2. Review maint_flag — if 1, maintenance is already overdue\n3. Check recent_maint — if 0 and stress_index is high, risk is critical\n4. Use log_days_since_maint for normalized urgency scoring\n5. Older machines (machine_age > 10) need more frequent maintenance cycles",
+    "machine": "Factory Machine",
+    "fault": "Overdue Maintenance",
+    "sensor_column": "days_since_maint",
+    "severity": "Medium",
+    "question_type": "fault_query",
+    "language": "en"
+  },
+  {
+    "question": "How to prioritize maintenance based on machine sensor data?",
+    "answer": "1. Check days_since_maint — if > 30 days, schedule maintenance immediately\n2. Review maint_flag — if 1, maintenance is already overdue\n3. Check recent_maint — if 0 and stress_index is high, risk is critical\n4. Use log_days_since_maint for normalized urgency scoring\n5. Older machines (machine_age > 10) need more frequent maintenance cycles",
+    "machine": "Factory Machine",
+    "fault": "Overdue Maintenance",
+    "sensor_column": "days_since_maint",
+    "severity": "Medium",
+    "question_type": "solution_query",
+    "language": "en"
+  },
+  {
+    "question": "Maintenance overdue?",
+    "answer": "1. Check days_since_maint — if > 30 days, schedule maintenance immediately\n2. Review maint_flag — if 1, maintenance is already overdue\n3. Check recent_maint — if 0 and stress_index is high, risk is critical\n4. Use log_days_since_maint for normalized urgency scoring\n5. Older machines (machine_age > 10) need more frequent maintenance cycles",
+    "machine": "Factory Machine",
+    "fault": "Overdue Maintenance",
+    "sensor_column": "days_since_maint",
+    "severity": "Medium",
+    "question_type": "short_query",
+    "language": "en"
+  },
+  {
+    "question": "كيف أعرف أن الماكينة تحتاج صيانة عاجلة؟",
+    "answer": "1. افحص days_since_maint — إذا تجاوز 30 يوماً، جدول الصيانة فوراً\n2. راجع maint_flag — إذا كانت 1، الصيانة متأخرة بالفعل\n3. افحص recent_maint — إذا كانت 0 و stress_index مرتفع، الخطر حرج\n4. استخدم log_days_since_maint لتقييم درجة الإلحاح بشكل موحد\n5. الماكينات القديمة (machine_age > 10) تحتاج دورات صيانة أكثر تكراراً",
+    "machine": "Factory Machine",
+    "fault": "Overdue Maintenance",
+    "sensor_column": "days_since_maint",
+    "severity": "Medium",
+    "question_type": "arabic_query",
+    "language": "ar"
+  },
+  {
+    "question": "كيف أحدد أولوية الصيانة بناءً على بيانات الحساس؟",
+    "answer": "1. افحص days_since_maint — إذا تجاوز 30 يوماً، جدول الصيانة فوراً\n2. راجع maint_flag — إذا كانت 1، الصيانة متأخرة بالفعل\n3. افحص recent_maint — إذا كانت 0 و stress_index مرتفع، الخطر حرج\n4. استخدم log_days_since_maint لتقييم درجة الإلحاح بشكل موحد\n5. الماكينات القديمة (machine_age > 10) تحتاج دورات صيانة أكثر تكراراً",
+    "machine": "Factory Machine",
+    "fault": "Overdue Maintenance",
+    "sensor_column": "days_since_maint",
+    "severity": "Medium",
+    "question_type": "arabic_query",
+    "language": "ar"
+  },
+  {
+    "question": "How do I know if a machine is overdue for maintenance?\nكيف أعرف أن الماكينة تحتاج صيانة عاجلة؟",
+    "answer": "1. Check days_since_maint — if > 30 days, schedule maintenance immediately\n2. Review maint_flag — if 1, maintenance is already overdue\n3. Check recent_maint — if 0 and stress_index is high, risk is critical\n4. Use log_days_since_maint for normalized urgency scoring\n5. Older machines (machine_age > 10) need more frequent maintenance cycles\n\n---\n\n1. افحص days_since_maint — إذا تجاوز 30 يوماً، جدول الصيانة فوراً\n2. راجع maint_flag — إذا كانت 1، الصيانة متأخرة بالفعل\n3. افحص recent_maint — إذا كانت 0 و stress_index مرتفع، الخطر حرج\n4. استخدم log_days_since_maint لتقييم درجة الإلحاح بشكل موحد\n5. الماكينات القديمة (machine_age > 10) تحتاج دورات صيانة أكثر تكراراً",
+    "machine": "Factory Machine",
+    "fault": "Overdue Maintenance",
+    "sensor_column": "days_since_maint",
+    "severity": "Medium",
+    "question_type": "bilingual_query",
+    "language": "bilingual"
+  },
+  {
+    "question": "How to prioritize maintenance based on machine sensor data?\nكيف أحدد أولوية الصيانة بناءً على بيانات الحساس؟",
+    "answer": "1. Check days_since_maint — if > 30 days, schedule maintenance immediately\n2. Review maint_flag — if 1, maintenance is already overdue\n3. Check recent_maint — if 0 and stress_index is high, risk is critical\n4. Use log_days_since_maint for normalized urgency scoring\n5. Older machines (machine_age > 10) need more frequent maintenance cycles\n\n---\n\n1. افحص days_since_maint — إذا تجاوز 30 يوماً، جدول الصيانة فوراً\n2. راجع maint_flag — إذا كانت 1، الصيانة متأخرة بالفعل\n3. افحص recent_maint — إذا كانت 0 و stress_index مرتفع، الخطر حرج\n4. استخدم log_days_since_maint لتقييم درجة الإلحاح بشكل موحد\n5. الماكينات القديمة (machine_age > 10) تحتاج دورات صيانة أكثر تكراراً",
+    "machine": "Factory Machine",
+    "fault": "Overdue Maintenance",
+    "sensor_column": "days_since_maint",
+    "severity": "Medium",
+    "question_type": "bilingual_query",
+    "language": "bilingual"
+  },
+  {
+    "question": "What does failure_flag = 1 mean in the machine data?",
+    "answer": "1. failure_flag = 1 means the model predicted imminent failure — stop machine now\n2. Check the target column to identify which failure type is predicted\n3. Review stress_index and power_stress — both high confirms failure is near\n4. Check comp column to identify which component is at risk\n5. Immediately log the event and dispatch the maintenance team",
+    "machine": "Factory Machine",
+    "fault": "Failure Prediction Alert",
+    "sensor_column": "failure_flag",
+    "severity": "Critical",
+    "question_type": "fault_query",
+    "language": "en"
+  },
+  {
+    "question": "How to respond when the system predicts machine failure?",
+    "answer": "1. failure_flag = 1 means the model predicted imminent failure — stop machine now\n2. Check the target column to identify which failure type is predicted\n3. Review stress_index and power_stress — both high confirms failure is near\n4. Check comp column to identify which component is at risk\n5. Immediately log the event and dispatch the maintenance team",
+    "machine": "Factory Machine",
+    "fault": "Failure Prediction Alert",
+    "sensor_column": "failure_flag",
+    "severity": "Critical",
+    "question_type": "fault_query",
+    "language": "en"
+  },
+  {
+    "question": "What actions to take when failure_flag is triggered?",
+    "answer": "1. failure_flag = 1 means the model predicted imminent failure — stop machine now\n2. Check the target column to identify which failure type is predicted\n3. Review stress_index and power_stress — both high confirms failure is near\n4. Check comp column to identify which component is at risk\n5. Immediately log the event and dispatch the maintenance team",
+    "machine": "Factory Machine",
+    "fault": "Failure Prediction Alert",
+    "sensor_column": "failure_flag",
+    "severity": "Critical",
+    "question_type": "solution_query",
+    "language": "en"
+  },
+  {
+    "question": "Failure flag triggered?",
+    "answer": "1. failure_flag = 1 means the model predicted imminent failure — stop machine now\n2. Check the target column to identify which failure type is predicted\n3. Review stress_index and power_stress — both high confirms failure is near\n4. Check comp column to identify which component is at risk\n5. Immediately log the event and dispatch the maintenance team",
+    "machine": "Factory Machine",
+    "fault": "Failure Prediction Alert",
+    "sensor_column": "failure_flag",
+    "severity": "Critical",
+    "question_type": "short_query",
+    "language": "en"
+  },
+  {
+    "question": "ماذا يعني ظهور failure_flag = 1 في بيانات الماكينة؟",
+    "answer": "1. failure_flag = 1 تعني أن النموذج تنبأ بعطل وشيك — أوقف الماكينة فوراً\n2. افحص عمود target لتحديد نوع العطل المتوقع\n3. راجع stress_index و power_stress — ارتفاعهما معاً يؤكد قرب العطل\n4. افحص عمود comp لتحديد المكون المعرض للخطر\n5. سجّل الحادثة فوراً وأرسل فريق الصيانة",
+    "machine": "Factory Machine",
+    "fault": "Failure Prediction Alert",
+    "sensor_column": "failure_flag",
+    "severity": "Critical",
+    "question_type": "arabic_query",
+    "language": "ar"
+  },
+  {
+    "question": "ما الإجراءات الواجب اتخاذها عند تفعل تنبيه الفشل؟",
+    "answer": "1. failure_flag = 1 تعني أن النموذج تنبأ بعطل وشيك — أوقف الماكينة فوراً\n2. افحص عمود target لتحديد نوع العطل المتوقع\n3. راجع stress_index و power_stress — ارتفاعهما معاً يؤكد قرب العطل\n4. افحص عمود comp لتحديد المكون المعرض للخطر\n5. سجّل الحادثة فوراً وأرسل فريق الصيانة",
+    "machine": "Factory Machine",
+    "fault": "Failure Prediction Alert",
+    "sensor_column": "failure_flag",
+    "severity": "Critical",
+    "question_type": "arabic_query",
+    "language": "ar"
+  },
+  {
+    "question": "What does failure_flag = 1 mean in the machine data?\nماذا يعني ظهور failure_flag = 1 في بيانات الماكينة؟",
+    "answer": "1. failure_flag = 1 means the model predicted imminent failure — stop machine now\n2. Check the target column to identify which failure type is predicted\n3. Review stress_index and power_stress — both high confirms failure is near\n4. Check comp column to identify which component is at risk\n5. Immediately log the event and dispatch the maintenance team\n\n---\n\n1. failure_flag = 1 تعني أن النموذج تنبأ بعطل وشيك — أوقف الماكينة فوراً\n2. افحص عمود target لتحديد نوع العطل المتوقع\n3. راجع stress_index و power_stress — ارتفاعهما معاً يؤكد قرب العطل\n4. افحص عمود comp لتحديد المكون المعرض للخطر\n5. سجّل الحادثة فوراً وأرسل فريق الصيانة",
+    "machine": "Factory Machine",
+    "fault": "Failure Prediction Alert",
+    "sensor_column": "failure_flag",
+    "severity": "Critical",
+    "question_type": "bilingual_query",
+    "language": "bilingual"
+  },
+  {
+    "question": "What actions to take when failure_flag is triggered?\nما الإجراءات الواجب اتخاذها عند تفعل تنبيه الفشل؟",
+    "answer": "1. failure_flag = 1 means the model predicted imminent failure — stop machine now\n2. Check the target column to identify which failure type is predicted\n3. Review stress_index and power_stress — both high confirms failure is near\n4. Check comp column to identify which component is at risk\n5. Immediately log the event and dispatch the maintenance team\n\n---\n\n1. failure_flag = 1 تعني أن النموذج تنبأ بعطل وشيك — أوقف الماكينة فوراً\n2. افحص عمود target لتحديد نوع العطل المتوقع\n3. راجع stress_index و power_stress — ارتفاعهما معاً يؤكد قرب العطل\n4. افحص عمود comp لتحديد المكون المعرض للخطر\n5. سجّل الحادثة فوراً وأرسل فريق الصيانة",
+    "machine": "Factory Machine",
+    "fault": "Failure Prediction Alert",
+    "sensor_column": "failure_flag",
+    "severity": "Critical",
+    "question_type": "bilingual_query",
+    "language": "bilingual"
+  },
+  {
+    "question": "Why is the machine stress index critically high?",
+    "answer": "1. stress_index combines vibration + pressure + rotate — high value = machine under strain\n2. Check power_stress alongside — both high means electrical + mechanical overload\n3. Reduce machine load immediately if stress_index exceeds normal threshold\n4. Check machine_age — older machines reach critical stress levels faster\n5. Cross-check volt and rotate readings to identify the root cause",
+    "machine": "Factory Machine",
+    "fault": "High Stress Index",
+    "sensor_column": "stress_index",
+    "severity": "High",
+    "question_type": "fault_query",
+    "language": "en"
+  },
+  {
+    "question": "What causes high stress_index values in factory data?",
+    "answer": "1. stress_index combines vibration + pressure + rotate — high value = machine under strain\n2. Check power_stress alongside — both high means electrical + mechanical overload\n3. Reduce machine load immediately if stress_index exceeds normal threshold\n4. Check machine_age — older machines reach critical stress levels faster\n5. Cross-check volt and rotate readings to identify the root cause",
+    "machine": "Factory Machine",
+    "fault": "High Stress Index",
+    "sensor_column": "stress_index",
+    "severity": "High",
+    "question_type": "fault_query",
+    "language": "en"
+  },
+  {
+    "question": "How to reduce machine stress index readings?",
+    "answer": "1. stress_index combines vibration + pressure + rotate — high value = machine under strain\n2. Check power_stress alongside — both high means electrical + mechanical overload\n3. Reduce machine load immediately if stress_index exceeds normal threshold\n4. Check machine_age — older machines reach critical stress levels faster\n5. Cross-check volt and rotate readings to identify the root cause",
+    "machine": "Factory Machine",
+    "fault": "High Stress Index",
+    "sensor_column": "stress_index",
+    "severity": "High",
+    "question_type": "solution_query",
+    "language": "en"
+  },
+  {
+    "question": "Stress index high?",
+    "answer": "1. stress_index combines vibration + pressure + rotate — high value = machine under strain\n2. Check power_stress alongside — both high means electrical + mechanical overload\n3. Reduce machine load immediately if stress_index exceeds normal threshold\n4. Check machine_age — older machines reach critical stress levels faster\n5. Cross-check volt and rotate readings to identify the root cause",
+    "machine": "Factory Machine",
+    "fault": "High Stress Index",
+    "sensor_column": "stress_index",
+    "severity": "High",
+    "question_type": "short_query",
+    "language": "en"
+  },
+  {
+    "question": "ما سبب ارتفاع مؤشر الإجهاد الميكانيكي في الماكينة؟",
+    "answer": "1. stress_index يجمع الاهتزاز + الضغط + الدوران — القيمة العالية تعني ضغطاً على الماكينة\n2. افحص power_stress معه — ارتفاعهما معاً يعني حملاً زائداً كهربائياً وميكانيكياً\n3. خفف حمل الماكينة فوراً إذا تجاوز stress_index الحد الطبيعي\n4. راجع machine_age — الماكينات القديمة تصل للمستوى الحرج أسرع\n5. تحقق من قراءات volt و rotate لتحديد السبب الجذري",
+    "machine": "Factory Machine",
+    "fault": "High Stress Index",
+    "sensor_column": "stress_index",
+    "severity": "High",
+    "question_type": "arabic_query",
+    "language": "ar"
+  },
+  {
+    "question": "كيف أخفض قراءات stress_index في الماكينة؟",
+    "answer": "1. stress_index يجمع الاهتزاز + الضغط + الدوران — القيمة العالية تعني ضغطاً على الماكينة\n2. افحص power_stress معه — ارتفاعهما معاً يعني حملاً زائداً كهربائياً وميكانيكياً\n3. خفف حمل الماكينة فوراً إذا تجاوز stress_index الحد الطبيعي\n4. راجع machine_age — الماكينات القديمة تصل للمستوى الحرج أسرع\n5. تحقق من قراءات volt و rotate لتحديد السبب الجذري",
+    "machine": "Factory Machine",
+    "fault": "High Stress Index",
+    "sensor_column": "stress_index",
+    "severity": "High",
+    "question_type": "arabic_query",
+    "language": "ar"
+  },
+  {
+    "question": "Why is the machine stress index critically high?\nما سبب ارتفاع مؤشر الإجهاد الميكانيكي في الماكينة؟",
+    "answer": "1. stress_index combines vibration + pressure + rotate — high value = machine under strain\n2. Check power_stress alongside — both high means electrical + mechanical overload\n3. Reduce machine load immediately if stress_index exceeds normal threshold\n4. Check machine_age — older machines reach critical stress levels faster\n5. Cross-check volt and rotate readings to identify the root cause\n\n---\n\n1. stress_index يجمع الاهتزاز + الضغط + الدوران — القيمة العالية تعني ضغطاً على الماكينة\n2. افحص power_stress معه — ارتفاعهما معاً يعني حملاً زائداً كهربائياً وميكانيكياً\n3. خفف حمل الماكينة فوراً إذا تجاوز stress_index الحد الطبيعي\n4. راجع machine_age — الماكينات القديمة تصل للمستوى الحرج أسرع\n5. تحقق من قراءات volt و rotate لتحديد السبب الجذري",
+    "machine": "Factory Machine",
+    "fault": "High Stress Index",
+    "sensor_column": "stress_index",
+    "severity": "High",
+    "question_type": "bilingual_query",
+    "language": "bilingual"
+  },
+  {
+    "question": "How to reduce machine stress index readings?\nكيف أخفض قراءات stress_index في الماكينة؟",
+    "answer": "1. stress_index combines vibration + pressure + rotate — high value = machine under strain\n2. Check power_stress alongside — both high means electrical + mechanical overload\n3. Reduce machine load immediately if stress_index exceeds normal threshold\n4. Check machine_age — older machines reach critical stress levels faster\n5. Cross-check volt and rotate readings to identify the root cause\n\n---\n\n1. stress_index يجمع الاهتزاز + الضغط + الدوران — القيمة العالية تعني ضغطاً على الماكينة\n2. افحص power_stress معه — ارتفاعهما معاً يعني حملاً زائداً كهربائياً وميكانيكياً\n3. خفف حمل الماكينة فوراً إذا تجاوز stress_index الحد الطبيعي\n4. راجع machine_age — الماكينات القديمة تصل للمستوى الحرج أسرع\n5. تحقق من قراءات volt و rotate لتحديد السبب الجذري",
+    "machine": "Factory Machine",
+    "fault": "High Stress Index",
+    "sensor_column": "stress_index",
+    "severity": "High",
+    "question_type": "bilingual_query",
+    "language": "bilingual"
+  }
+]

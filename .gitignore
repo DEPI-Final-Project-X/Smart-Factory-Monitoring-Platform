@@ -1,0 +1,10 @@
+.env
+*.env
+.env.*
+**/.env
+**/.env.*
+!.env.example
+!**/.env.example
+
+.ipynb_checkpoints/
+**/.ipynb_checkpoints/
