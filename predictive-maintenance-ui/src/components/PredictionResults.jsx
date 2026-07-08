@@ -35,9 +35,9 @@ export function PredictionResults({ results }) {
   return (
     <div className="space-y-6">
       <div className="grid gap-4 md:grid-cols-2 xl:grid-cols-4">
-        <MetricCard title="Machines analyzed" value={results.summary.totalMachines} subtitle="Rows processed from preview data" icon={Cpu} tone="violet" />
+        <MetricCard title="Machines analyzed" value={results.summary.totalMachines} subtitle="Rows processed from uploaded CSV" icon={Cpu} tone="violet" />
         <MetricCard title="Critical risk" value={results.summary.criticalMachines} subtitle="Require action in next 24h" icon={AlertTriangle} tone="rose" />
-        <MetricCard title="Average confidence" value={`${results.summary.avgConfidence}%`} subtitle="Mock prediction confidence" icon={TrendingUp} tone="cyan" />
+        <MetricCard title="Average confidence" value={`${results.summary.avgConfidence}%`} subtitle="XGBoost prediction confidence" icon={TrendingUp} tone="cyan" />
         <MetricCard title="Healthy assets" value={results.summary.healthyMachines} subtitle="Operating within threshold" icon={ShieldCheck} tone="emerald" />
       </div>
 
@@ -45,7 +45,7 @@ export function PredictionResults({ results }) {
         <Card>
           <CardHeader>
             <CardTitle>Failure Risk Trend</CardTitle>
-            <CardDescription>Mock probability curve across the forecast window</CardDescription>
+            <CardDescription>Risk probability curve across the 24h forecast window</CardDescription>
           </CardHeader>
           <CardContent className="h-[320px]">
             <ResponsiveContainer width="100%" height="100%">
@@ -75,7 +75,7 @@ export function PredictionResults({ results }) {
         <Card>
           <CardHeader>
             <CardTitle>Sensor Anomaly Breakdown</CardTitle>
-            <CardDescription>Mock scoring by telemetry channel</CardDescription>
+            <CardDescription>Anomaly scoring per telemetry channel</CardDescription>
           </CardHeader>
           <CardContent className="h-[320px]">
             <ResponsiveContainer width="100%" height="100%">
@@ -101,10 +101,10 @@ export function PredictionResults({ results }) {
         <CardHeader className="flex-row items-start justify-between gap-4">
           <div>
             <CardTitle>Prediction Output</CardTitle>
-            <CardDescription>Frontend mock results after clicking run prediction</CardDescription>
+            <CardDescription>Backend prediction output — powered by XGBoost pipeline</CardDescription>
           </div>
           <div className="rounded-full border border-violet-400/20 bg-violet-500/10 px-3 py-1.5 text-xs text-violet-200">
-            Local state only
+            XGBoost · Live
           </div>
         </CardHeader>
         <CardContent>
@@ -153,7 +153,7 @@ export function PredictionResults({ results }) {
                 Operator insight
               </div>
               <p className="text-sm leading-6 text-slate-400">
-                Confidence grows when vibration and temperature spike together. This screen keeps the backend abstracted and focuses on interaction quality.
+                Confidence grows when vibration and temperature spike together. The XGBoost model weighs all five sensor channels and applies your configured threshold to classify risk.
               </p>
             </div>
           </div>

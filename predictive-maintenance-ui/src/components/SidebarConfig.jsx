@@ -125,9 +125,9 @@ export function SidebarConfig({ config, setConfig, mobile = false }) {
                 <Sparkles className="h-5 w-5" />
               </div>
               <div>
-                <p className="text-sm font-semibold text-slate-100">Modern AI SaaS style</p>
+                <p className="text-sm font-semibold text-slate-100">Fully wired backend</p>
                 <p className="mt-1 text-sm leading-6 text-slate-400">
-                  Glass cards, soft gradients, rounded controls, and quick feedback for every interaction.
+                  XGBoost failure prediction, CNN defect detection, and a Cohere RAG assistant — all served from FastAPI on localhost:8000.
                 </p>
               </div>
             </div>

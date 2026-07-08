@@ -4,19 +4,19 @@ import {
   Bell,
   BrainCircuit,
   LineChart,
-  Siren,
-  Wrench,
+  ScanLine,
   Sparkles,
-  Gauge
+  Gauge,
+  BarChart3,
 } from 'lucide-react'
 
 const tabs = [
-  { key: 'prediction', label: 'Prediction', icon: Sparkles },
-  { key: 'analysis', label: 'Data Analysis', icon: LineChart },
-  { key: 'assistant', label: 'AI Assistant', icon: BrainCircuit },
-  { key: 'machines', label: 'Machine Management', icon: Wrench },
-  { key: 'monitor', label: 'Live Monitor', icon: Activity },
-  { key: 'alerts', label: 'Alerts', icon: Bell }
+  { key: 'prediction', label: 'Prediction',      icon: Sparkles    },
+  { key: 'analysis',   label: 'Data Analysis',   icon: BarChart3   },
+  { key: 'assistant',  label: 'AI Assistant',    icon: BrainCircuit},
+  { key: 'machines',   label: 'Image Classify',  icon: ScanLine    },
+  { key: 'monitor',    label: 'Live Monitor',    icon: Activity    },
+  { key: 'alerts',     label: 'Alerts',          icon: Bell        },
 ]
 
 export function TabsNav({ activeTab, onChange }) {
@@ -49,9 +49,9 @@ export function TabsNav({ activeTab, onChange }) {
             </button>
           )
         })}
-        <div className="ml-auto hidden items-center gap-2 rounded-2xl border border-white/10 bg-slate-950/45 px-3 py-2 text-xs text-slate-400 lg:flex">
+        <div className="ml-auto hidden items-center gap-2 rounded-2xl border border-emerald-400/20 bg-emerald-500/10 px-3 py-2 text-xs text-emerald-300 lg:flex">
           <Gauge className="h-4 w-4 text-emerald-300" />
-          UI Only · Mock Data · No Backend
+          Live Backend · XGBoost · CNN · RAG
         </div>
       </div>
     </div>

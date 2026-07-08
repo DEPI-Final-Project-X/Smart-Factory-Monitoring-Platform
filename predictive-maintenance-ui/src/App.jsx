@@ -9,16 +9,22 @@ import {
   WandSparkles,
   CheckCircle2,
   AlertTriangle,
-  FileSpreadsheet,
-  ServerCog
+  ServerCog,
+  Cpu
 } from 'lucide-react'
 import { SidebarConfig } from './components/SidebarConfig'
 import { TabsNav } from './components/TabsNav'
 import { FileUpload } from './components/FileUpload'
 import { DataPreviewTable } from './components/DataPreviewTable'
 import { PredictionResults } from './components/PredictionResults'
+import { ImageClassification } from './components/ImageClassification'
+import { AiAssistant } from './components/AiAssistant'
+import { LiveMonitor } from './components/LiveMonitor'
+import { DataAnalysis } from './components/DataAnalysis'
+import { Alerts } from './components/Alerts'
 import { Button } from './components/ui/button'
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from './components/ui/card'
+import { predictBatch } from './services/api'
 
 const SAMPLE_ROWS = [
   { machine_id: 'MX-101', temperature: 78, vibration: 0.24, pressure: 31, rpm: 1210, load: 71, timestamp: '2026-07-05 08:00' },
@@ -42,11 +48,7 @@ const INITIAL_CONFIG = {
 const PLACEHOLDER_COPY = {
   analysis: {
     title: 'Data Analysis',
-    description: 'Use this tab shell for KPI exploration, drift analysis, and segment filters.'
-  },
-  assistant: {
-    title: 'AI Assistant',
-    description: 'A clean UI placeholder for future chat, summaries, and operator guidance.'
+    description: 'KPI exploration, drift analysis, and segment filters — coming soon.'
   },
   machines: {
     title: 'Machine Management',
@@ -62,16 +64,37 @@ const PLACEHOLDER_COPY = {
   }
 }
 
+function parseCSVLine(line) {
+  // Handles quoted fields correctly
+  const result = []
+  let current = ''
+  let inQuotes = false
+  for (let i = 0; i < line.length; i++) {
+    const ch = line[i]
+    if (ch === '"') {
+      inQuotes = !inQuotes
+    } else if (ch === ',' && !inQuotes) {
+      result.push(current.trim())
+      current = ''
+    } else {
+      current += ch
+    }
+  }
+  result.push(current.trim())
+  return result
+}
+
 function parseCSV(text) {
   const lines = text.trim().split(/\r?\n/).filter(Boolean)
   if (!lines.length) return { columns: [], rows: [] }
 
-  const columns = lines[0].split(',').map((item) => item.trim())
+  const columns = parseCSVLine(lines[0])
+
   const rows = lines.slice(1).map((line) => {
-    const values = line.split(',').map((item) => item.trim())
-    return columns.reduce((accumulator, column, index) => {
-      accumulator[column] = values[index] ?? ''
-      return accumulator
+    const values = parseCSVLine(line)
+    return columns.reduce((acc, col, i) => {
+      acc[col] = values[i] ?? ''
+      return acc
     }, {})
   })
 
@@ -81,21 +104,23 @@ function parseCSV(text) {
 function buildResults(rows, threshold) {
   const totalMachines = rows.length
   const enriched = rows.map((row, index) => {
-    const temperature = Number(row.temperature) || 70 + index * 2
-    const vibration = Number(row.vibration) || 0.2 + index * 0.03
-    const pressure = Number(row.pressure) || 30 + index
-    const load = Number(row.load) || 60 + index * 2
+    const volt      = Number(row.volt ?? row.temperature) || 175
+    const vibration = Number(row.vibration) || 0.3
+    const pressure  = Number(row.pressure)  || 35
+    const machineId = row.machineID ?? row.machine_id ?? `Machine-${index + 1}`
 
-    const rawScore = temperature * 0.34 + vibration * 100 * 0.42 + pressure * 0.12 + load * 0.12
-    const normalized = Math.min(0.98, Math.max(0.12, rawScore / 100))
+    // Normalise to 0-1 risk score matching the heuristic in the backend
+    const voltRisk = Math.max(0, (200 - volt) / 100)
+    const raw = voltRisk * 0.34 + vibration * 100 * 0.42 + pressure / 100 * 0.12
+    const normalized = Math.min(0.98, Math.max(0.02, raw))
     const failureProbability = Math.round(normalized * 100)
     const status = normalized >= Math.max(threshold + 0.2, 0.75) ? 'Critical' : normalized >= threshold ? 'Warning' : 'Healthy'
 
     return {
-      machine: row.machine_id || `Machine-${index + 1}`,
+      machine: String(machineId),
       failureProbability,
       leadTime: status === 'Critical' ? '6 - 12 hrs' : status === 'Warning' ? '24 hrs' : '72 hrs',
-      cause: vibration > 0.42 ? 'Vibration anomaly' : temperature > 84 ? 'Thermal rise' : 'Pressure drift',
+      cause: vibration > 0.42 ? 'Vibration anomaly' : volt < 160 ? 'Low voltage' : 'Pressure drift',
       status,
       normalized
     }
@@ -190,17 +215,32 @@ export default function App() {
   const handleFileUpload = (file) => {
     if (!file) return
 
+    // For large files (>5 MB) read only the first 100 KB to extract
+    // a preview — avoids hanging the browser on 500+ MB datasets.
+    const PREVIEW_BYTES = 100 * 1024  // 100 KB — enough for ~500 rows
+    const blob = file.size > PREVIEW_BYTES ? file.slice(0, PREVIEW_BYTES) : file
+
     const reader = new FileReader()
     reader.onload = (event) => {
-      const text = String(event.target?.result || '')
+      let text = String(event.target?.result || '')
+
+      // If we sliced the file, drop the last (possibly incomplete) line
+      if (file.size > PREVIEW_BYTES) {
+        const lastNewline = text.lastIndexOf('\n')
+        if (lastNewline > 0) text = text.slice(0, lastNewline)
+      }
+
       const { columns, rows } = parseCSV(text)
       setPreviewColumns(columns)
       setPreviewRows(rows)
       setFileName(file.name)
-      setUploadMessage(`${rows.length} rows loaded successfully.`)
+      const totalNote = file.size > PREVIEW_BYTES
+        ? `${rows.length} preview rows loaded (file is ${(file.size / 1024 / 1024).toFixed(0)} MB — showing first rows for prediction)`
+        : `${rows.length} rows loaded successfully.`
+      setUploadMessage(totalNote)
       setPredictionResults(null)
     }
-    reader.readAsText(file)
+    reader.readAsText(blob)
   }
 
   const clearUploadedFile = () => {
@@ -213,12 +253,19 @@ export default function App() {
 
   const loadSampleData = () => applyRows(SAMPLE_ROWS, 'sample_telemetry.csv')
 
-  const runPrediction = () => {
+  const [predictionError, setPredictionError] = useState('')
+
+  const runPrediction = async () => {
     setPredictionLoading(true)
-    setTimeout(() => {
-      setPredictionResults(buildResults(previewRows, config.threshold))
+    setPredictionError('')
+    try {
+      const results = await predictBatch(previewRows, config.threshold)
+      setPredictionResults(results)
+    } catch (err) {
+      setPredictionError(err.message ?? 'Prediction failed. Is the backend running?')
+    } finally {
       setPredictionLoading(false)
-    }, 1500)
+    }
   }
 
   return (
@@ -260,19 +307,19 @@ export default function App() {
                     Predictive Maintenance System
                   </div>
                   <h1 className="text-3xl font-semibold tracking-tight text-white lg:text-4xl">
-                    Modern AI dashboard frontend
+                    Smart Factory Monitoring Platform
                   </h1>
                   <p className="mt-3 max-w-2xl text-sm leading-6 text-slate-400 lg:text-base">
-                    Dark SaaS-style prediction interface with glassmorphism cards, smooth state transitions, local CSV parsing, and mock analytics.
+                    XGBoost predictive maintenance · CNN equipment defect detection · RAG maintenance assistant — all wired to a live FastAPI backend.
                   </p>
                 </div>
               </div>
 
               <div className="grid gap-3 sm:grid-cols-3">
                 {[
-                  { label: 'Frontend scope', value: 'UI only', icon: WandSparkles, tone: 'violet' },
-                  { label: 'State handling', value: 'Local React', icon: CheckCircle2, tone: 'emerald' },
-                  { label: 'Data mode', value: 'Mock / CSV', icon: FileSpreadsheet, tone: 'cyan' }
+                  { label: 'Prediction', value: 'XGBoost', icon: WandSparkles, tone: 'violet' },
+                  { label: 'Vision', value: 'CNN Model', icon: CheckCircle2, tone: 'emerald' },
+                  { label: 'Assistant', value: 'Cohere RAG', icon: Cpu, tone: 'cyan' }
                 ].map((item) => (
                   <div key={item.label} className="rounded-3xl border border-white/10 bg-slate-950/40 px-4 py-4">
                     <div className="flex items-center gap-2 text-sm text-slate-400">
@@ -294,7 +341,7 @@ export default function App() {
                 <CardHeader>
                   <CardTitle>Machine Failure Prediction</CardTitle>
                   <CardDescription>
-                    Upload a CSV, preview the rows, then trigger a mock prediction workflow with loading feedback.
+                    Upload a CSV with sensor readings, preview the rows, then trigger a live XGBoost prediction via the backend API.
                   </CardDescription>
                 </CardHeader>
                 <CardContent className="space-y-6">
@@ -322,7 +369,7 @@ export default function App() {
                     <div>
                       <p className="text-sm font-semibold text-slate-100">Run prediction</p>
                       <p className="mt-1 text-sm text-slate-400">
-                        Button stays disabled until a CSV or sample dataset is loaded into local state.
+                        Button stays disabled until a CSV or sample dataset is loaded. Results are powered by the live XGBoost backend.
                       </p>
                     </div>
                     <Button className="h-12 min-w-[190px]" disabled={!hasData || predictionLoading} onClick={runPrediction}>
@@ -339,6 +386,12 @@ export default function App() {
                       )}
                     </Button>
                   </div>
+
+                  {predictionError && (
+                    <p className="flex items-center gap-2 rounded-2xl border border-rose-400/20 bg-rose-500/10 px-4 py-3 text-sm text-rose-300">
+                      <AlertTriangle className="h-4 w-4 shrink-0" /> {predictionError}
+                    </p>
+                  )}
                 </CardContent>
               </Card>
 
@@ -355,7 +408,7 @@ export default function App() {
                         </div>
                         <h2 className="text-2xl font-semibold text-white">No results yet</h2>
                         <p className="mt-3 max-w-2xl text-sm leading-6 text-slate-400">
-                          Complete the upload flow to enable the CTA, then run the prediction to reveal mock insights, charts, status badges, and machine-level outcomes.
+                          Load a CSV or sample data, then click Run Prediction. Results are computed by the live XGBoost pipeline on the backend.
                         </p>
                       </div>
                       <div className="rounded-3xl border border-white/10 bg-slate-950/35 p-4 text-sm text-slate-400">
@@ -366,8 +419,18 @@ export default function App() {
                 </Card>
               )}
             </div>
+          ) : activeTab === 'assistant' ? (
+            <AiAssistant />
+          ) : activeTab === 'machines' ? (
+            <ImageClassification />
+          ) : activeTab === 'monitor' ? (
+            <LiveMonitor />
+          ) : activeTab === 'analysis' ? (
+            <DataAnalysis />
+          ) : activeTab === 'alerts' ? (
+            <Alerts />
           ) : (
-            <PlaceholderPanel title={PLACEHOLDER_COPY[activeTab].title} description={PLACEHOLDER_COPY[activeTab].description} />
+            <PlaceholderPanel title={PLACEHOLDER_COPY[activeTab]?.title ?? activeTab} description={PLACEHOLDER_COPY[activeTab]?.description ?? ''} />
           )}
         </div>
       </main>
